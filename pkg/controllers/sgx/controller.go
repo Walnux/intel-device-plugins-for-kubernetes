@@ -101,6 +101,9 @@ func setInitContainer(spec *v1.PodSpec, imageName string) {
 			ImagePullPolicy: "IfNotPresent",
 			Name:            "intel-sgx-initcontainer",
 			SecurityContext: &v1.SecurityContext{
+				SELinuxOptions: &v1.SELinuxOptions{
+					Type: "spc_t",
+				},
 				ReadOnlyRootFilesystem: &yes,
 			},
 			VolumeMounts: []v1.VolumeMount{

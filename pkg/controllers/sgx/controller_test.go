@@ -70,6 +70,9 @@ func (c *controller) newDaemonSetExpected(rawObj client.Object) *apps.DaemonSet 
 							Image:           devicePlugin.Spec.Image,
 							ImagePullPolicy: "IfNotPresent",
 							SecurityContext: &v1.SecurityContext{
+								SELinuxOptions: &v1.SELinuxOptions{
+									Type: "spc_t",
+								},
 								ReadOnlyRootFilesystem: &yes,
 							},
 							VolumeMounts: []v1.VolumeMount{
