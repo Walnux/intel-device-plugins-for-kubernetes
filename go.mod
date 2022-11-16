@@ -7,11 +7,11 @@ require (
 	github.com/go-ini/ini v1.66.2
 	github.com/go-logr/logr v1.2.2
 	github.com/google/gousb v1.1.1
-	github.com/klauspost/cpuid/v2 v2.0.9
+	github.com/klauspost/cpuid/v2 v2.2.1
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.17.0
 	github.com/pkg/errors v0.9.1
-	golang.org/x/sys v0.0.0-20211205182925-97ca703d548d
+	golang.org/x/sys v0.0.0-20220704084225-05e143d24a9e
 	google.golang.org/grpc v1.43.0
 	k8s.io/api v0.23.1
 	k8s.io/apimachinery v0.23.1
